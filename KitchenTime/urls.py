@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from experience import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^asdf', views.testy),
+	url(r'^$', views.experience_index, name="index"),
 ]

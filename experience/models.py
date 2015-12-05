@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import uuid
 
 class Experience(models.Model):
     name = models.CharField(max_length=50, default="")
@@ -12,4 +13,9 @@ class Experience(models.Model):
     creation_time = models.DateTimeField(default=timezone.now, blank=True)
 
     def __unicode__(self):
-        return self.name + " at " + self.location
+        return self.name
+
+    def save(self):
+        if not self.experience_id:
+            self.experience_id = uuid.uuid1().hex[:10]
+        super(Experience, self).save()
