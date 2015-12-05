@@ -1,0 +1,161 @@
+
+section.hacks {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: 'Gotham SSm A', 'Gotham SSm B';
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    background: #fffefb;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fffefb;
+    overflow: auto;
+    padding: 60px 0;
+    height: auto;
+    background: #f8f9f7;
+    width: 100%;
+    float: left;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fffefb;
+    overflow: auto;
+    padding: 60px 0;
+    height: auto;
+}
+
+section.section.featured {
+  background: #fffefb;
+  overflow: auto;
+  padding: 60px 0;
+  height: auto;
+}
+
+section.section.featured .featurecontent {
+  margin: 10px;
+}
+
+/* UI ELEMENTS */
+
+.col-16 {
+  float: left;
+}
+
+.col-16 {
+  width: 100%;
+}
+
+/*1024+*/
+
+@media (min-width: 1024px) {
+  .col-8-lg {
+    float: left;
+  }
+
+  .col-8-lg {
+    width: 50%;
+  }
+}
+
+/*768-1023*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-8-md {
+    float: left;
+  }
+
+  .col-8-md {
+    width: 50%;
+  }
+}
+
+/*0-767*/
+
+@media (max-width: 767px) {
+  .col-16-sm {
+    float: left;
+  }
+
+  .col-16-sm {
+    width: 100%;
+  }
+}
+
+section.section.featured .feature {
+  height: 450px;
+  background: #e4f3f3;
+  background-size: cover !important;
+  position: relative;
+  color: #fffefb;
+}
+
+
+section.section.featured .featuretag {
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  padding: 5px 15px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 15px;
+}
+
+section.section.featured .featuretag.blog {
+  background: #464646;
+}
+
+@media (max-width: 767px) {
+  section.section.featured .featuretag {
+    left: 20px;
+  }
+}
+
+section.section.featured .featuretitle {
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  color: #464646;
+  line-height: 1.25;
+  width: 60%;
+  color: #fffefb;
+  position: absolute;
+  bottom: 90px;
+  left: 30px;
+}
+
+@media (max-width: 767px) {
+  section.section.featured .featuretitle {
+    font-size: 28px;
+    bottom: 60px;
+    left: 20px;
+  }
+}
+
+section.section.featured .featurecredit {
+  position: absolute;
+  color: #fffefb;
+  bottom: 40px;
+  left: 30px;
+}
+
+@media (max-width: 767px) {
+  section.section.featured .featurecredit {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+

@@ -6,8 +6,8 @@ import datetime, datetime
 from django.utils import timezone
 
 def experience_index(request):
+	data = request.POST or None
+        if data:
+	    	return render(request, 'experience/two.html')
 	experience = Experience.objects.all()
 	return render(request, 'experience/index.html', {'experience' : experience})
-
-def testy(request):
-	return render(request, 'experience/two.html')

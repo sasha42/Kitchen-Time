@@ -20,6 +20,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^asdf', views.testy),
 	url(r'^$', views.experience_index, name="index"),
 ]

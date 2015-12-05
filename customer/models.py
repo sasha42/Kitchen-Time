@@ -10,8 +10,10 @@ class Customer(models.Model):
     email = models.EmailField(max_length=75, default="")
     reason = models.TextField(default="")
     experience = models.ForeignKey(Experience, verbose_name='Experience')
-    order_id = models.CharField(max_length=10, default="", editable=False, primary_key=True, unique=True)
-    order_time = models.DateTimeField(default=timezone.now, blank=True)
+    denial = models.BooleanField(default="0")
+    experience_time = models.DateTimeField(blank=True)
+    customer_id = models.CharField(max_length=10, default="", editable=False, primary_key=True, unique=True)
+    submission_time = models.DateTimeField(default=timezone.now, blank=True)
 
     def save(self):
         if not self.order_key:
