@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bookings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Booking List</h2>
+    <p>People that want to book an amazing kitchen experience at your restaurant:</p>
+    <table class="table table_hover">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Reason</th>
+            <th>Experience</th>
+            <th>Arranged Time</th>
+            <th>Booking Time</th>
+            <th>Approve</th>
+            <th>Decline</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.first_name }}</td>
+            <td>{{ customer.last_name }}</td>
+            <td>{{ customer.number }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.reason }}</td>
+            <td>{{ customer.experience }}</td>
+            <td>{{ customer.experience_time}}</td>
+            <td>{{ customer.submission_time}}</td>
+            <td> <button type="button" class="btn btn-success {% if customer.denial %} disabled {% endif %}">Approve</button></td>
+            <td> <button type="button" class="btn btn-danger  {% if customer.denial  %} disabled {% endif %} ">Decline</button></td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

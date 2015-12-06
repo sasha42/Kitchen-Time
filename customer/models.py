@@ -16,9 +16,9 @@ class Customer(models.Model):
     submission_time = models.DateTimeField(default=timezone.now, blank=True)
 
     def save(self):
-        if not self.order_key:
-            self.order_key = uuid.uuid1().hex[:10]
-        super(Order, self).save()
+        if not self.customer_id:
+            self.customer_id = uuid.uuid1().hex[:10]
+        super(Customer, self).save()
 
     def __unicode__(self):
         return self.first_name + " " + self.last_name

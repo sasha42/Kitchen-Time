@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from experience import views
+from customer import views as customer_view
 from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-	url(r'^$', views.experience_index, name="index"),
+    url(r'^$', views.experience_index, name="index"),
+    url(r'^bookings/', customer_view.customer_index, name="index")
 ]
