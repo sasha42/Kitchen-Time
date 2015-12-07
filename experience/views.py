@@ -9,5 +9,5 @@ def experience_index(request):
 	data = request.POST or None
         if data:
 	    	return render(request, 'experience/two.html')
-	experience = Experience.objects.all()
-	return render(request, 'experience/index.html', {'experience' : experience})
+	experiences = Experience.objects.all()
+	return render(request, 'experience/index.html', {'experiences' : experiences})
